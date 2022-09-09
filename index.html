@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <div  class="demo demo--card-flip">
+        <div class="card_center" class="center" class="scene scene--card">
+          <div class="card">
+            <div class="card__face card__face--front" id="fcard_info_front">
+                Welcome! Click me to show backside.
+            </div>
+            <div class="card__face card__face--back" id="fcard_info_back">
+                Click "Incorrect" or "Correct" to show the next.
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+      ( function() {
+            var card = document.querySelector('.demo--card-flip .card');
+            card.addEventListener( 'click', function() {
+            card.classList.toggle('is-flipped');
+        });
+      })();
+      </script>
+    <br>
+    <br>
+    <div class="card_center" class="container">
+        
+        <script src="./jquery.js"></script>
+        <script src="script.js"></script>
+        <button class="button-19" onclick="nextCard(true)">Correct</button>
+        <button class="button-19" onclick="nextCard(false)">Incorrect</button>
+        <button class="button-19" onclick="playAudio()">Play Audio</button>
+        <!-- <button onclick="test()">Test</button> -->
+    </div>
+</html>
